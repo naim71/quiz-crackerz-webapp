@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import Link from '../Link/Link';
 import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
+import NavItems from '../NavItems/NavItems';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
     const [open, setOpen] =useState(false);
-    const routes = [
-        {id: 1, name: 'Topics', path: '/topics'},
-        {id: 2, name: 'Statistics', path: '/statistics'},
-        {id: 3, name: 'Blog', path: '/blog'},
-    ]
     
     return (
         <div>
@@ -20,12 +16,10 @@ const Navbar = () => {
             </div>
            
             <nav className='md:flex justify-between items-center mx-20 px-10 my-10'>
-                <h1 className='text-sky-800 font-bold text-3xl'><a href='/'>Quizology</a></h1>
-                <ul className={`md:flex md:space-x-12 absolute  md:static ${open ? 'bg-white left-0 top-10 w-full' : 'top-[-200px]'}`}>
-                    {
-                        routes.map(route => <Link key={route.id} route={route}></Link>)
-                    }
-                </ul>
+                <h1 className='text-sky-800 font-bold text-3xl'><Link to='/topics'>Quizology</Link></h1>
+                <div className={`md:flex md:space-x-12 absolute  md:static ${open ? 'bg-white left-0 top-10 w-full' : 'top-[-200px]'}`}>
+                <NavItems></NavItems>
+                </div>
             </nav>
         </div>
       

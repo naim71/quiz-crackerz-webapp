@@ -1,14 +1,25 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Cards from './components/Cards/Cards';
-import HeroSection from './components/HeroSection/HeroSection';
-import Navbar from './components/Navbar/Navbar';
+import Blog from './components/Blog/Blog';
+import Header from './components/Header/Header';
+import Statistics from './components/Statistics/Statistics';
+import Main from './layout/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/', 
+    element: <Main></Main>,
+    children: [
+      {path: 'topics', element: <Header></Header>},
+      {path: 'statistics', element: <Statistics></Statistics>},
+      {path: 'blog', element: <Blog></Blog>}
+    ] 
+  }
+  ])
   return (
     <div className="App bg-green-300">
-        <Navbar></Navbar>
-        <HeroSection></HeroSection>
-        <Cards></Cards>
+        <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
