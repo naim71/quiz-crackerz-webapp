@@ -29,7 +29,7 @@ function App() {
 
     ] 
   },
-     {path: '*', element: <ErrorPage></ErrorPage>}
+     {path: '/*', element: <ErrorPage></ErrorPage>}
   ])
   return (
     <div className="App bg-green-300">
