@@ -7,8 +7,6 @@ const Header = () => {
     console.log(cards);
     return (
         <div>
-            <HeroSection></HeroSection>
-            <Cards></Cards>
         </div>
     );
 };

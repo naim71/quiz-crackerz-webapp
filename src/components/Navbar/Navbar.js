@@ -3,7 +3,6 @@ import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
 import NavItems from '../NavItems/NavItems';
 import { Link } from 'react-router-dom';
 
-
 const Navbar = () => {
     const [open, setOpen] =useState(false);
     

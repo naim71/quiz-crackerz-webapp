@@ -9,7 +9,7 @@ const Card = ({card}) => {
         
         <div>
             
-        <div className="max-w-sm bg-cyan-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div className="mx-auto bg-cyan-100 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
          <a href="/">
         <img className="rounded-t-lg p-4" src={logo} alt=""/>
          </a>
