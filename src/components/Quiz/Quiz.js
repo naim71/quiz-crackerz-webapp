@@ -6,9 +6,9 @@ const Quiz = () => {
     const quiz = useLoaderData();
     const quizQstn = quiz.data.questions;
     return (
-        <div className='bg-white mx-20 rounded-xl'>
-            <h1 className='text-sky-800 text-2xl font-bold p-5'>Quiz of {quiz.data.name}</h1>
-            <div  className='grid grid-cols-1 gap-6 mx-auto'>
+        <div className='bg-violet-700 mx-20 rounded-xl'>
+            <h1 className='text-white text-3xl font-bold p-5 mb-6'>Quiz of {quiz.data.name}</h1>
+            <div  className='grid grid-cols-1 gap-10 mx-auto'>
             {
                 quizQstn.map(qstn => <QuizQuestions
                     key={qstn.id}
