@@ -4,6 +4,7 @@ import Blog from './components/Blog/Blog';
 import Cards from './components/Cards/Cards';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Header from './components/Header/Header';
+import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';
 import Main from './layout/Main';
 
@@ -21,7 +22,8 @@ function App() {
         element: <Cards></Cards>},
       {path: 'statistics', element: <Statistics></Statistics>},
       { path: 'blog', element: <Blog></Blog>},
-      {path: 'home', element: <Header></Header>}
+      {path: '/quiz/:quizId', element: <Quiz></Quiz>},
+      // {path: 'home', element: <Header></Header>}
 
 
     ] 
