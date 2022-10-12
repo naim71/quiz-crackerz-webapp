@@ -22,7 +22,13 @@ function App() {
         element: <Cards></Cards>},
       {path: 'statistics', element: <Statistics></Statistics>},
       { path: 'blog', element: <Blog></Blog>},
-      {path: '/quiz/:quizId', element: <Quiz></Quiz>},
+      {
+       path: '/quiz/:quizId',
+       loader: async ({params}) =>{
+        return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+       },
+       element: <Quiz></Quiz>
+      }
       // {path: 'home', element: <Header></Header>}
 
 
