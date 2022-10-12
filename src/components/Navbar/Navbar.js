@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
            
             <nav className='md:flex justify-between items-center mx-20 px-10 my-10'>
-                <h1 className='text-sky-800 font-bold text-3xl'><Link to='/topics'>Quizology</Link></h1>
+                <h1 className='text-sky-800 font-bold text-3xl'><Link to='/'>Quizology</Link></h1>
                 <div className={`md:flex md:space-x-12 absolute  md:static ${open ? 'bg-white left-0 top-10 w-full' : 'top-[-200px]'}`}>
                 <NavItems></NavItems>
                 </div>

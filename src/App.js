@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
+import Cards from './components/Cards/Cards';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Header from './components/Header/Header';
 import Statistics from './components/Statistics/Statistics';
@@ -12,9 +13,17 @@ function App() {
       path: '/', 
     element: <Main></Main>,
     children: [
-      {path: 'topics', element: <Header></Header>},
+      {
+        path: 'topics', 
+        loader: () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+        element: <Cards></Cards>},
       {path: 'statistics', element: <Statistics></Statistics>},
-      {path: 'blog', element: <Blog></Blog>}
+      { path: 'blog', element: <Blog></Blog>},
+      {path: 'home', element: <Header></Header>}
+
+
     ] 
   },
      {path: '*', element: <ErrorPage></ErrorPage>}
